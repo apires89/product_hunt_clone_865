@@ -1,8 +1,6 @@
-# app/controllers/products_controllers.rb
-class ProductsController < ApplicationController
-  skip_before_action :authenticate_user!, only: :index
+class PagesController < ApplicationController
+  skip_before_action :authenticate_user!, only: [ :home ]
 
-  def index
-    @products = Product.all
+  def home
   end
 end
